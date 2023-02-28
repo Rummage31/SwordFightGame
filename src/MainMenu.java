@@ -4,6 +4,7 @@ public class MainMenu {
     MainScreen ms = new MainScreen();
     JFrame mFrame = new JFrame();
     mFrame.add(ms);
+    mFrame.setSize(1000,1000);
     mFrame.setVisible(true);
     }
 }
