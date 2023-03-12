@@ -1,10 +1,7 @@
 import javax.swing.*;
 public class MainMenu {
     public static void main(String[] args) {
-    MainScreen ms = new MainScreen();
-    JFrame mFrame = new JFrame();
-    mFrame.add(ms);
-    mFrame.setSize(1000,1000);
-    mFrame.setVisible(true);
+        new Game();
+
     }
 }

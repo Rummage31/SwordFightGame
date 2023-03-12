@@ -1,5 +1,8 @@
 import javax.swing.*;
+import javax.swing.event.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class MainScreen extends JPanel{
 
@@ -21,7 +24,30 @@ public class MainScreen extends JPanel{
         add(quitButton);
         add(blank);
 
+        playButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setVisible(false);
 
+            }
+
+        });
+        optionsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+
+            }
+
+        });
+        quitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+
+            }
+
+        });
 
     }
 }
