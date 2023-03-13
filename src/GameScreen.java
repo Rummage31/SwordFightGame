@@ -7,10 +7,10 @@ public class GameScreen extends JPanel {
             setVisible(true);
             setFocusable(true);
         }
+    public void paintComponent(Graphics g){
+        super.paintComponent(g);
 
-        public void paintComponent(Graphics g){
-            super.paintComponent(g);
+        g.fillRect(0,900,2000,100);
+    }
 
-            g.fillRect(900,0,2000,100);
-        }
 }
