@@ -22,12 +22,17 @@ public class MainScreen extends JPanel{
     private JLabel blank7 = new JLabel();
     private JLabel blank8 = new JLabel();
 
+    private GraphicsDevice vc;
 
     //private Image;
 
     public MainScreen(){
-        setBackground(new Color(87, 77, 77));
-        setLayout(new GridLayout(3,3));
+
+        GraphicsEnvironment env = GraphicsEnvironment.getLocalGraphicsEnvironment();
+        vc = env.getDefaultScreenDevice();
+
+//        setBackground(new Color(87, 77, 77));
+//        setLayout(new GridLayout(3,3));
 
         add(blank1);
         add(blank2);
@@ -65,9 +70,39 @@ public class MainScreen extends JPanel{
             public void actionPerformed(ActionEvent e) {
                 System.exit(0);
 
+
             }
 
         });
 
     }
+    public void setFullScreen(DisplayMode dm, JFrame window){
+        //makes it so theres no scroll bar or tiltle.
+        window.setUndecorated(true);
+        window.setResizable(false);
+        vc.setFullScreenWindow(window);
+        //makes sure that the window can become fullscreen as long as it is given window settings
+        if(dm != null && vc.isDisplayChangeSupported()){
+            try{
+                vc.setDisplayMode(dm);
+            }catch(Exception e){}
+
+        }
+
+
+    }
+
+    public Window getFullScreenWindow(){
+        return vc.getFullScreenWindow();
+    }
+
+    public void restoreScreen(){
+        Window w = vc.getFullScreenWindow();
+        if(w != null){
+            w.dispose();
+        }
+        vc.setFullScreenWindow(null);
+    }
+
+
 }
