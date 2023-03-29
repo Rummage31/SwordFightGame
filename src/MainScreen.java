@@ -33,47 +33,47 @@ public class MainScreen extends JPanel{
 
 //        setBackground(new Color(87, 77, 77));
 //        setLayout(new GridLayout(3,3));
-
-        add(blank1);
-        add(blank2);
-        add(playButton);
-        add(blank3);
-        add(blank4);
-        add(optionsButton);
-        add(blank5);
-        add(blank6);
-        add(quitButton);
-        add(blank7);
-        add(blank8);
-
-
-
-
-        playButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                setVisible(false);
-                //gsFrame.setVisible(true);
-            }
-
-        });
-        optionsButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-
-            }
-
-        });
-        quitButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.exit(0);
-
-
-            }
-
-        });
+//
+//        add(blank1);
+//        add(blank2);
+//        add(playButton);
+//        add(blank3);
+//        add(blank4);
+//        add(optionsButton);
+//        add(blank5);
+//        add(blank6);
+//        add(quitButton);
+//        add(blank7);
+//        add(blank8);
+//
+//
+//
+//
+//        playButton.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//                setVisible(false);
+//                //gsFrame.setVisible(true);
+//            }
+//
+//        });
+//        optionsButton.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//
+//
+//            }
+//
+//        });
+//        quitButton.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//                System.exit(0);
+//
+//
+//            }
+//
+//        });
 
     }
     public void setFullScreen(DisplayMode dm, JFrame window){
